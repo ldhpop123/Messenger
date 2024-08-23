@@ -1,0 +1,179 @@
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+}
+
+/* 왼쪽 사이드 (header) */
+
+.container > .main_left {
+    flex: 2;
+    min-width: 350px;
+    max-width: 550px;
+}
+
+.main_left > header {
+    height: 70px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.main_left > header > .dehaze{
+    font-size: 30px;
+}
+
+.main_left > header > .user_search {
+    width: 85%; height: 45px;
+    padding-left: 8px;
+    background-color: rgba(182, 178, 178, 0.562);
+    color: gray;
+    border: none;
+}
+
+
+/* 왼쪽 사이드 (friend list) */
+
+.main_left > .user_list {
+    width: 100%; height: calc(100vh - 70px);
+    list-style: none;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    scroll-snap-align: start;
+}
+
+.user_list::-webkit-scrollbar {
+    display: none;
+}
+
+
+.main_left > .user_list > .user_box {
+    width: 100%; height: 100px;
+    padding: 0 10px 0 5px;
+    display: flex; 
+    justify-content: space-between;
+}
+
+.user_box > .user_info {
+    display: flex;
+    align-items: center;
+}
+
+.user_box > .user_info > .img_wrapper {
+    width: 85px; height: 85px;
+    position: relative;
+    margin-right: 10px;
+}
+
+.user_box > .user_info > .img_wrapper > img {
+    position: absolute;
+    top: 0; left: 0;
+    transform: translate(50, 50);
+    width: 100%; height: 100%;
+    border-radius: 100%;
+    object-fit: cover;
+    margin: auto;
+}
+
+.user_box > .user_info > .nickANDhistory {
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.user_box > .user_info > .nickANDhistory > .nick {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.user_box > .time_box {
+    padding: 20px 0 0 0;
+}
+
+.user_box > .time_box > .time {
+    text-align: right;
+}
+
+/* chat area */
+
+.container > main {
+    flex: 5;
+    height: 100vh;
+}
+
+.container > main > header {
+    width: 100%; height: 70px;
+    background-color: #923333;
+}
+
+.container > main > .chat_area {
+    height: calc(100vh - 125px);
+    background-color: aqua;
+    list-style: none;
+    overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+    padding: 5px 20px 2vh 20px ;
+}
+
+.chat_area::-webkit-scrollbar {
+    display: none;
+}
+
+/* chat */
+
+.message {
+    width: 100%;
+}
+
+.message > div {
+    display: inline-block;
+    width: fit-content;
+    max-width: 55%;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #fff;
+    margin-bottom: 35px;
+    text-align: left;
+    word-break:break-all;
+}
+
+.my_chat {
+    text-align: right;
+}
+
+/* chat input */
+
+.container > main > .input_bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 55px;
+}
+
+main > .input_bar > .attach_file {
+    font-size: 38px;
+    transform: rotate(225deg);
+    color: gray;
+    cursor: pointer;
+}   
+
+main > .input_bar > input {
+    width: 90%; height: 40px;
+    border: none;
+    font-size: 16px;
+    padding-left: 5px;
+    cursor: pointer;
+}
+
+main > .input_bar > .send {
+    font-size: 30px;
+    color: gray;
+    cursor: pointer;
+}   

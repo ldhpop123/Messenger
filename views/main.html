@@ -5,11 +5,164 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{title}}</title>
     <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="/main.css">
 </head>
 <body>
     <div class="container">
+        <div class="main_left">
+            <header>
+                <div class="dehaze">
+                    <i class="material-icons">dehaze</i>
+                </div>
+                <input class="user_search" type="text" placeholder="search">
+            </header>
+            <ul class="user_list">
 
+                <li class="user_box">
+                    <input type="hidden" class="user_id" value="">
+                    <div class="user_info">
+                        <div class="img_wrapper"> 
+                            <img src="https://img1.daumcdn.net/thumb/R1280x0/?fname=http://t1.daumcdn.net/brunch/service/user/8EUf/image/XQS1e4WTkH72sSpjG-l3DImXxqs.jpg" alt="">
+                        </div>
+                        <div class="nickANDhistory">
+                            <p class="nick">ldhpop123</p>
+                            <p class="history">ddddd</p>
+                        </div>
+                    </div>
+                    <div class="time_box">
+                        <p class="time">24:00pm</p>
+                    </div>
+                </li>
+
+                <li class="user_box">
+                    <input type="hidden" class="user_id" value="">
+                    <div class="user_info">
+                        <div class="img_wrapper"> 
+                            <img src="https://img1.daumcdn.net/thumb/R1280x0/?fname=http://t1.daumcdn.net/brunch/service/user/8EUf/image/XQS1e4WTkH72sSpjG-l3DImXxqs.jpg" alt="">
+                        </div>
+                        <div class="nickANDhistory">
+                            <p class="nick">ldhpop123</p>
+                            <p class="history">ddddd</p>
+                        </div>
+                    </div>
+                    <div class="time_box">
+                        <p class="time">24:00pm</p>
+                    </div>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- CHAT -->
+        <main>
+            <header>
+                1
+            </header>
+
+            <ul class="chat_area">
+                <!-- {% for commit in commits %}
+                    <li class="message other">1111 <span>24:00pm</span> <input type="hidden" id="message_id" value=""></li>
+                {% endfor %} -->
+                <li class="message my_chat">
+                    <div>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur, voluptatem! Natus, facilis vitae suscipit recusandae velit debitis? Optio enim ea nam. Minima pariatur, modi cumque aperiam totam aliquid vel impedit.
+                        <input type="hidden" id="message_id" value="">
+                    </div>
+                </li>
+
+                <li class="message my_chat">
+                    <div>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur, voluptatem! Natus, facilis vitae suscipit recusandae velit debitis? Optio enim ea nam. Minima pariatur, modi cumque aperiam totam aliquid vel impedit.
+                        <input type="hidden" id="message_id" value="">
+                    </div>
+                </li>
+
+                <li class="message my_chat">
+                    <div>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur, voluptatem! Natus, facilis vitae suscipit recusandae velit debitis? Optio enim ea nam. Minima pariatur, modi cumque aperiam totam aliquid vel impedit.
+                        <input type="hidden" id="message_id" value="">
+                    </div>
+                </li>
+
+                <li class="message">
+                    <div>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur, voluptatem! Natus, facilis vitae suscipit recusandae velit debitis? Optio enim ea nam. Minima pariatur, modi cumque aperiam totam aliquid vel impedit.
+                        <input type="hidden" id="message_id" value="">
+                    </div>
+                </li>
+
+                <li class="message my_chat">
+                    <div>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur, voluptatem! Natus, facilis vitae suscipit recusandae velit debitis? Optio enim ea nam. Minima pariatur, modi cumque aperiam totam aliquid vel impedit.
+                        <input type="hidden" id="message_id" value="">
+                    </div>
+                </li>
+
+                <li class="message my_chat">
+                    <div>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur, voluptatem! Natus, facilis vitae suscipit recusandae velit debitis? Optio enim ea nam. Minima pariatur, modi cumque aperiam totam aliquid vel impedit.
+                        <input type="hidden" id="message_id" value="">
+                    </div>
+                </li>
+
+                <li class="message my_chat">
+                    <div>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur, voluptatem! Natus, facilis vitae suscipit recusandae velit debitis? Optio enim ea nam. Minima pariatur, modi cumque aperiam totam aliquid vel impedit.
+                        <input type="hidden" id="message_id" value="">
+                    </div>
+                </li>
+
+                <li class="message">
+                    <div>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur, voluptatem! Natus, facilis vitae suscipit recusandae velit debitis? Optio enim ea nam. Minima pariatur, modi cumque aperiam totam aliquid vel impedit.
+                        <input type="hidden" id="message_id" value="">
+                    </div>
+                </li>
+
+                <li class="message my_chat">
+                    <div>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur, voluptatem! Natus, facilis vitae suscipit recusandae velit debitis? Optio enim ea nam. Minima pariatur, modi cumque aperiam totam aliquid vel impedit.
+                        <input type="hidden" id="message_id" value="">
+                    </div>
+                </li>
+
+                <li class="message my_chat">
+                    <div>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur, voluptatem! Natus, facilis vitae suscipit recusandae velit debitis? Optio enim ea nam. Minima pariatur, modi cumque aperiam totam aliquid vel impedit.
+                        <input type="hidden" id="message_id" value="">
+                    </div>
+                </li>
+
+                <li class="message my_chat">
+                    <div>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur, voluptatem! Natus, facilis vitae suscipit recusandae velit debitis? Optio enim ea nam. Minima pariatur, modi cumque aperiam totam aliquid vel impedit.
+                        <input type="hidden" id="message_id" value="">
+                    </div>
+                </li>
+
+                <li class="message">
+                    <div>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur, voluptatem! Natus, facilis vitae suscipit recusandae velit debitis? Optio enim ea nam. Minima pariatur, modi cumque aperiam totam aliquid vel impedit.
+                        <input type="hidden" id="message_id" value="">
+                    </div>
+                </li>
+            </ul>
+
+            <label for="" class="input_bar">
+                <i class="material-icons attach_file">attach_file</i>
+                <input type="text" placeholder="Write a message...">
+                <i class="material-icons send">send</i>
+            </label>
+        </main>
     </div>
+
+    <script>
+        window.onload = function() {
+            const scrollContainer = document.querySelector('.chat_area');
+            
+            // 페이지가 로드되면 채팅 스크롤을 맨 밑으로 이동
+            scrollContainer.scrollTop = scrollContainer.scrollHeight;
+        };
+    </script>
 </body>
 </html>
