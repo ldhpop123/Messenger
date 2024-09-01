@@ -1,21 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{title}}</title>
-    <meta name="viewport" content="width=device-width, user-scalable=no">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="/main.css">
-</head>
-<body>
-    <form id="login-form" action="auth/login" method="post">
-        <p>Login</p>
-        <input type="email" placeholder="Email" name="email" required autofocus>
-        <input type="password" placeholder="password" name="password" required>
+{% extends 'layout.html' %}
+<!-- 'layout.html' 템플릿 확장 -->
 
-        <button type="submit">로그인</button>
-        <a id="join" href="/login">로그인으로</a>
-    </form>
-</body>
-</html>
+{% block content %}
+    <div class="joinPage sign">
+        <form id="join-form" action="auth/join" method="post">
+            <p>*회원 가입</p>
+            <label for=""><input type="email" placeholder="email" name="email" required autofocus></label>
+            <label for=""><input type="password" placeholder="password" name="password" required></label>
+            <label for=""><input type="password" placeholder="password Confirm" name="password-confirm" required></label>
+            <label for=""><input type="text" placeholder="nickname" name="nickname" required></label>
+            <button type="submit">회원가입</button>
+            <a id="join" href="/login">로그인으로</a>
+        </form>
+    </div>
+{% endblock %}

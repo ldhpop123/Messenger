@@ -3,9 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>{{title}}</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/main.css">
 </head>
 <body>
-    
+    {% block content %}
+        <!-- 추가 콘텐츠 블록을 위한 자리 표시자 -->
+    {% endblock %}
 </body>
 </html>
+
+{% block script%}
+
+{% endblock %}

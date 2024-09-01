@@ -1,21 +1,47 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{title}}</title>
-    <meta name="viewport" content="width=device-width, user-scalable=no">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="/main.css">
-</head>
-<body>
-    <form id="login-form" action="auth/login" method="post">
-        <p>Login</p>
-        <input type="email" placeholder="Email" name="email" required autofocus>
-        <input type="password" placeholder="password" name="password" required>
+{% extends 'layout.html' %}
+<!-- 'layout.html' 템플릿 확장 -->
 
-        <button type="submit">로그인</button>
-        <a id="join" href="/join">회원가입</a>
-    </form>
-</body>
-</html>
+{% block content %}
+    <div class="loginPage sign">
+        <form id="local-form" action="auth/login" method="post">
+            <p>* 이메일 로그인</p>
+
+            <label for=""><input type="email" placeholder="Email" name="email" required autofocus></label>
+            <label for=""><input type="password" placeholder="Password" name="password" required></label>
+            <button type="submit" class="submit_btn">로그인</button>
+            <p><a id="join" href="/join">회원가입</a></p>
+        </form>
+
+        <div id="multi-form">
+            <p>* 소셜 로그인</p>
+            <div class="naver_login multi">
+                <input type="hidden" value="naver">
+                <img src="" alt="">
+                <p>naver</p>
+            </div>
+
+            <div class="google_login multi">
+                <input type="hidden" value="google">
+                <img src="https://cdn4.iconfinder.com/data/icons/logos-brands-7/512/google_logo-google_icongoogle-512.png" alt="">
+                <p></p>
+            </div>
+
+            <div class="kakao_login multi">
+                <input type="hidden" value="kakao">
+                <img src="https://mblogthumb-phinf.pstatic.net/MjAxODAyMDJfOTAg/MDAxNTE3NTAyODA4ODI0.cxuAkiwL2Dw5FUxUYWTwA2GUwlqpLzgRwjHirNDC6Cog.fTa3ixKaDFaD7DM6ctC0BodxnM_1DTdUsp3IzmOwsJkg.PNG.marketstory24/%EC%B9%B4%EC%B9%B4%EC%98%A4%ED%86%A1_%EB%A1%9C%EA%B3%A0_3.png?type=w800" alt="">
+                <p>kakao</p>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}
+
+{% block script %}
+    <script>
+        document.querySelectorAll('.multi').forEach(function(multi) {
+            multi.addEventListener('click', (e) => {
+                console.log(e)
+            })
+        })
+    </script>
+{% endblock %}

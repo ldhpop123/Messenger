@@ -1,14 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{title}}</title>
-    <meta name="viewport" content="width=device-width, user-scalable=no">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="/main.css">
-</head>
-<body>
+{% extends 'layout.html' %}
+<!-- 'layout.html' 템플릿 확장 -->
+
+{% block content %}
     <div class="container">
         <div class="main_left">
             <header>
@@ -155,7 +148,9 @@
             </label>
         </main>
     </div>
+{% endblock %}
 
+{% block script%}
     <script>
         window.onload = function() {
             const scrollContainer = document.querySelector('.chat_area');
@@ -164,5 +159,4 @@
             scrollContainer.scrollTop = scrollContainer.scrollHeight;
         };
     </script>
-</body>
-</html>
+{% endblock %}

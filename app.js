@@ -10,6 +10,7 @@ const passport = require('passport')
 // .env 파일에 정의된 환경 변수들 로드
 dotenv.config();
 const pageRouter = require('./routes/page');
+const authRouter = require('./routes/auth')
 const { sequelize } = require('./models');
 
 // express 모듈 애플리케이션
@@ -50,7 +51,8 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // 라우터
-app.use('/', pageRouter); 
+app.use('/', pageRouter);
+app.use('/auth', authRouter); 
 
 // 요청한 라우터가 없으면 404
 app.use((req, res, next) => {
