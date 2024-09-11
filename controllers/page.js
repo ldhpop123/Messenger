@@ -5,10 +5,10 @@ exports.renderMain = (req, res, next) => {
 
 // 로그인 박스
 exports.loginPage = (req, res, next) => {
-    res.render('loginPage', { title: '로그인 - Messenger' })
+    res.render('main', { title: '로그인 - Messenger' })
 }
 
 // 회원가입 박스
 exports.joinPage = (req, res, next) => {
-    res.render('joinPage', { title: '회원가입 - Messenger' })
+    res.render('main', { title: '회원가입 - Messenger' })
 }

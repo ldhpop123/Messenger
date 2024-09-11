@@ -15,7 +15,7 @@ const { sequelize } = require('./models');
 
 // express 모듈 애플리케이션
 const app = express()
-app.set('port', process.env.PORT || 8001);
+app.set('port', process.env.PORT || 8003);
 app.set('view engine', 'html');
 // nunjucks 설정
 nunjucks.configure('views', {
